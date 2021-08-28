@@ -5,7 +5,9 @@
     "node": ">=14"
   },
   "scripts": {
-    "build": "yarn esbuild src/server.jsx --bundle --platform=node --outfile=dist/server.js",
+    "lint": "yarn eslint \"src/**\"",
+    "build:client": "yarn esbuild src/client.jsx --bundle --outfile=public/bundle.js",
+    "build:server": "yarn esbuild src/server.jsx --bundle --platform=node --outfile=dist/server.js",
     "start": "node dist/server.js"
   },
   "dependencies": {
@@ -15,6 +17,12 @@
     "react-router-dom": "^5.2.1"
   },
   "devDependencies": {
-    "esbuild": "^0.12.24"
+    "esbuild": "^0.12.24",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-react": "^7.24.0"
   }
 }

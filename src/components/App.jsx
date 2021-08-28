@@ -1,7 +1,12 @@
 import React from 'react'
+import { Router } from './Router'
+import { Header } from './Header'
+import { Footer } from './Footer'
 
-const App = () => <h1>
-                    App Component
-                  </h1>
-
-export default App
+export const App = () => (
+  <>
+    <Header />
+    <Router />
+    <Footer />
+  </>
+)
